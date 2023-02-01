@@ -70,6 +70,18 @@ public class Vehicle {
         this.numDoors = numDoors;
     }
 
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public float calcBill() {
+        return 45; // intentionally daft
+    }
+
     @Override // @ -> annotation
     public String toString() {
         return "Vehicle{" +

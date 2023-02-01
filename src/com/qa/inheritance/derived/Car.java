@@ -30,4 +30,24 @@ public class Car  extends Vehicle {
     public void setBootOpen(boolean bootOpen) {
         this.bootOpen = bootOpen;
     }
+
+    @Override
+    public float calcBill() {
+        float cost  = 0;
+        cost += super.calcBill();
+        cost += isBootOpen() ? 100 : 50;
+        return cost;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "make='" + super.getMake() + '\'' +
+                ", model='" + super.getModel() + '\'' +
+                ", colour='" + super.getColour() + '\'' +
+                ", speed=" + super.getSpeed() +
+                ", numDoors=" + getNumDoors() +
+                ", bootOpen=" + bootOpen +
+                '}';
+    }
 }

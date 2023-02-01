@@ -66,7 +66,7 @@ public class Runner {
         String s2 = "jordan".toUpperCase();
         System.out.println(s1 + " " + s2);
         System.out.println(s1.toLowerCase().toUpperCase() == s2);
-        System.out.println("JORDAN" == "JORDAN");
+        System.out.println("JORDAN".equals("JORDAN"));
 
         System.out.println(s1.equals(s2));
 

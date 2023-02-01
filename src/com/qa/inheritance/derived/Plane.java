@@ -15,4 +15,18 @@ public class Plane extends Vehicle {
     public void honkHorn() {
         System.out.println("nyooooooooooom");
     }
+
+
+    @Override
+    public float calcBill() {
+        return isPropeller() ? 500 : 1_000;
+    }
+
+    public boolean isPropeller() {
+        return propeller;
+    }
+
+    public void setPropeller(boolean propeller) {
+        this.propeller = propeller;
+    }
 }
