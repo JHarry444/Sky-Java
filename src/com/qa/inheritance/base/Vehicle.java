@@ -1,6 +1,8 @@
 package com.qa.inheritance.base;
 
-public abstract class Vehicle {
+import com.qa.abstraction.Refuelable;
+
+public abstract class Vehicle implements Refuelable {
 
     private String make;
     private String model;
@@ -8,6 +10,8 @@ public abstract class Vehicle {
 
     private int speed;
     private int numDoors;
+
+    private int fuel;
     public Vehicle(String colour) {
         super();
         this.colour = colour;
@@ -24,8 +28,14 @@ public abstract class Vehicle {
 
     public abstract void honkHorn(); // every vehicle has a void honkHorn() but you're not saying what it does
 
+    @Override
     public void refuel() {
+        this.fuel = 30;
+    }
 
+    @Override
+    public void refuel(int fuel) {
+        this.fuel += fuel;
     }
 
     public void accelerate(int speed) {

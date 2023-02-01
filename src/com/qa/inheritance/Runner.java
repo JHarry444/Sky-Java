@@ -29,16 +29,17 @@ public class Runner {
             totalBill += vehicle.calcBill();
         }
 
+
         System.out.println("Total bill: " + totalBill);
     }
 
 
-    public Vehicle recommendVehicle(int load) {
-      if (load > 1_000) {
-            return new Van();
-        } else if (load > 10_000){
-            return new Lorry();
-        }
-        return new Car();
-    }
+//    public Vehicle recommendVehicle(int load) {
+//      if (load > 1_000) {
+//            return new Van();
+//        } else if (load > 10_000){
+//            return new Lorry();
+//        }
+//        return new Car();
+//    }
 }
