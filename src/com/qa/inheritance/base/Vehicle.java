@@ -1,6 +1,6 @@
 package com.qa.inheritance.base;
 
-public class Vehicle {
+public abstract class Vehicle {
 
     private String make;
     private String model;
@@ -22,9 +22,7 @@ public class Vehicle {
         this.numDoors = numDoors;
     }
 
-    public void honkHorn() {
-        System.out.println("honk");
-    }
+    public abstract void honkHorn(); // every vehicle has a void honkHorn() but you're not saying what it does
 
     public void refuel() {
 
@@ -78,9 +76,7 @@ public class Vehicle {
         this.speed = speed;
     }
 
-    public float calcBill() {
-        return 45; // intentionally daft
-    }
+    public abstract float calcBill();
 
     @Override // @ -> annotation
     public String toString() {

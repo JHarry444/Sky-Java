@@ -13,6 +13,7 @@ public class Runner {
         super();
     }
     public static void main(String[] args) {
+//        Vehicle v = new Vehicle(); can't be done as class is abstract
 
         Vehicle c = new Car("Red", false); // car UPCASTED to vehicle
 
@@ -29,5 +30,15 @@ public class Runner {
         }
 
         System.out.println("Total bill: " + totalBill);
+    }
+
+
+    public Vehicle recommendVehicle(int load) {
+      if (load > 1_000) {
+            return new Van();
+        } else if (load > 10_000){
+            return new Lorry();
+        }
+        return new Car();
     }
 }
