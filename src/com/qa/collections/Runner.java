@@ -46,7 +46,8 @@ public class Runner {
         List<Person> people = new ArrayList<>(List.of(
                 new Person("JH", 28, 180),
                 new Person("CP", 29, 140),
-                new Person("AS", 24, 150)));
+                new Person("AS", 24, 150))
+        );
 
         System.out.println(people);
 
