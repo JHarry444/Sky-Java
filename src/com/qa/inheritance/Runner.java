@@ -29,7 +29,6 @@ public class Runner {
             totalBill += vehicle.calcBill();
         }
 
-
         System.out.println("Total bill: " + totalBill);
     }
 

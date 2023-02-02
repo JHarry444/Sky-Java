@@ -2,7 +2,7 @@ package com.qa.inheritance.base;
 
 import com.qa.abstraction.Refuelable;
 
-public abstract class Vehicle implements Refuelable {
+public abstract class Vehicle implements Refuelable, Comparable<Vehicle> {
 
     private String make;
     private String model;
@@ -15,6 +15,11 @@ public abstract class Vehicle implements Refuelable {
     public Vehicle(String colour) {
         super();
         this.colour = colour;
+    }
+
+    @Override
+    public int compareTo(Vehicle o) {
+        return this.speed - o.speed;
     }
 
     public Vehicle(String make, String model, String colour, int speed, int numDoors) {

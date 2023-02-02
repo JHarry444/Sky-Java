@@ -1,6 +1,6 @@
 package com.qa.oop;
 
-public class Person {
+public class Person implements Comparable<Person> {
 
     private static final String latinName = "Homo Sapien";
 
@@ -65,5 +65,12 @@ public class Person {
                 ", age=" + age +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        if (this.age > o.age) return -1;
+        else if (this.age == o.age) return 0;
+        else return 1;
     }
 }

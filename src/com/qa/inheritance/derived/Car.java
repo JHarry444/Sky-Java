@@ -34,7 +34,7 @@ public class Car  extends Vehicle {
     @Override
     public float calcBill() {
         float cost  = 0;
-        cost += super.calcBill();
+//        cost += super.calcBill();
         cost += isBootOpen() ? 100 : 50;
         return cost;
     }

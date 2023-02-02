@@ -11,6 +11,10 @@ public class Van extends Vehicle {
         this.styling = styling;
     }
 
+    @Override
+    public void honkHorn() {
+
+    }
 
     @Override
     public float calcBill() {
