@@ -1,5 +1,7 @@
 package com.qa.abstraction;
 
+import com.qa.exceptions.FuelAmountException;
+
 public class Generator implements Refuelable {
 
     private int fuel;
@@ -10,7 +12,7 @@ public class Generator implements Refuelable {
     }
 
     @Override
-    public void refuel(int fuel) {
+    public void refuel(int fuel) throws FuelAmountException {
         this.fuel += fuel;
         if (this.fuel > maxFuel) this.fuel = maxFuel;
     }
